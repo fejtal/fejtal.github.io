@@ -1,29 +1,37 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
-  },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14",
-    "rollup": "^2.3.4",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0",
-    "svelte-preprocess": "^4.10.7",
-    "tailwindcss": "^3.1.4"
-  },
-  "dependencies": {
-    "daisyui": "^2.17.0",
-    "sirv-cli": "^2.0.0"
-  }
+	"name": "my-app",
+	"version": "0.0.1",
+	"scripts": {
+		"dev:only": "svelte-kit dev",
+		"build:only": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
+		"tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
+		"dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\"",
+		"build": "yarn run tailwind:build && yarn run build:only",
+		"deploy": "npm run build && npx gh-pages -d build"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-static": "^1.0.0-next.34",
+		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.4.7",
+		"concurrently": "^7.2.2",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"gh-pages": "^4.0.0",
+		"postcss-cli": "^9.1.0",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"tailwindcss": "^3.1.4",
+		"typescript": "^4.7.2"
+	},
+	"type": "module",
+	"dependencies": {
+		"daisyui": "^2.17.0"
+	}
 }
