@@ -3,7 +3,7 @@ import MiniCart from "../Dropdowns/MiniCart.svelte";
 import UserDropdown from "../Dropdowns/UserDropdown.svelte";
 
 </script>
-<div class="navbar rounded-md bg-base-200">
+<div class="navbar rounded-md bg-white">
   <div class="navbar-start">
     <div class="dropdown">
       <label for='navbar' tabindex="0" class="btn btn-ghost lg:hidden">
@@ -16,7 +16,7 @@ import UserDropdown from "../Dropdowns/UserDropdown.svelte";
             Parent
             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
           </a>
-          <ul class="p-2">
+          <ul class="mt-3 card card-compact dropdown-content w-52 bg-white shadow">
             <li><a href= "wikipedia.org">Submenu 1</a></li>
             <li><a href= "wikipedia.org">Submenu 2</a></li>
           </ul>

@@ -4,7 +4,7 @@
         <img src="https://api.lorem.space/image/face?hash=33791" alt='alt' />
       </div>
     </label>
-    <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+    <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-white rounded-box w-52">
       <li>
         <a href="https://google.com" class="justify-between">
           Profile

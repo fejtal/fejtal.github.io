@@ -6,7 +6,7 @@
           <span class="badge badge-sm indicator-item">8</span>
         </div>
       </label>
-      <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+      <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-white shadow">
         <div class="card-body">
           <span class="font-bold text-lg">8 Items</span>
           <span class="text-info">Subtotal: $999</span>
