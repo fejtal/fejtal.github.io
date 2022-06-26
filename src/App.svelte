@@ -8,6 +8,9 @@
     import Footer from "./components/Footers/Footer.svelte";
     import "./styles/tailwind-output.css";
 </script>
+<svelte:head>
+	<script type="text/javascript" src="//cdn.evgnet.com/beacon/craftwarepartnerpl/maddemo/scripts/evergage.min.js"></script>
+</svelte:head>
 <div class="container mx-auto px-10">
     <PageType/>
     <Navbar/>
