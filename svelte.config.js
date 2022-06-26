@@ -7,14 +7,15 @@ const dev = "production" === "development";
 const config = {
     kit: {
         adapter: adapter({
-            pages: "docs",
-            assets: "docs"
+            components: "docs",
+        	styles: "docs",
+			src: "src"
         }),
         paths: {
             // change below to your repo name
-            base: dev ? "" : "/fejtal.github.io",
+            base: dev ? "" : "",
         },
-    }
+	}
 };
 
 export default config;
