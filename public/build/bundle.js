@@ -1687,6 +1687,7 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "Add to cart";
+    			attr_dev(button, "id", "addToCartx");
     			attr_dev(button, "class", "px-6 py-2 transition ease-in duration-200 uppercase rounded-full hover:bg-primary hover:text-white border-2 border-gray-900 focus:outline-none");
     			add_location(button, file$5, 18, 0, 574);
     		},
