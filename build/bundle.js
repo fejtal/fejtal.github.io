@@ -2480,21 +2480,24 @@ var app = (function () {
     const file = "src\\App.svelte";
 
     function create_fragment(ctx) {
+    	let script;
+    	let script_src_value;
+    	let t0;
     	let div;
     	let pagetype;
-    	let t0;
-    	let navbar;
     	let t1;
-    	let breadcrumb;
+    	let navbar;
     	let t2;
-    	let form;
+    	let breadcrumb;
     	let t3;
-    	let divider0;
+    	let form;
     	let t4;
-    	let carousel;
+    	let divider0;
     	let t5;
-    	let divider1;
+    	let carousel;
     	let t6;
+    	let divider1;
+    	let t7;
     	let footer;
     	let current;
     	pagetype = new PageType({ $$inline: true });
@@ -2508,44 +2511,51 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			script = element("script");
+    			t0 = space();
     			div = element("div");
     			create_component(pagetype.$$.fragment);
-    			t0 = space();
-    			create_component(navbar.$$.fragment);
     			t1 = space();
-    			create_component(breadcrumb.$$.fragment);
+    			create_component(navbar.$$.fragment);
     			t2 = space();
-    			create_component(form.$$.fragment);
+    			create_component(breadcrumb.$$.fragment);
     			t3 = space();
-    			create_component(divider0.$$.fragment);
+    			create_component(form.$$.fragment);
     			t4 = space();
-    			create_component(carousel.$$.fragment);
+    			create_component(divider0.$$.fragment);
     			t5 = space();
-    			create_component(divider1.$$.fragment);
+    			create_component(carousel.$$.fragment);
     			t6 = space();
+    			create_component(divider1.$$.fragment);
+    			t7 = space();
     			create_component(footer.$$.fragment);
+    			attr_dev(script, "type", "text/javascript");
+    			if (!src_url_equal(script.src, script_src_value = "//cdn.evgnet.com/beacon/craftwarepartnerpl/maddemo/scripts/evergage.min.js")) attr_dev(script, "src", script_src_value);
+    			add_location(script, file, 11, 1, 516);
     			attr_dev(div, "class", "container mx-auto px-10");
-    			add_location(div, file, 10, 0, 501);
+    			add_location(div, file, 13, 0, 653);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			append_dev(document.head, script);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, div, anchor);
     			mount_component(pagetype, div, null);
-    			append_dev(div, t0);
-    			mount_component(navbar, div, null);
     			append_dev(div, t1);
-    			mount_component(breadcrumb, div, null);
+    			mount_component(navbar, div, null);
     			append_dev(div, t2);
-    			mount_component(form, div, null);
+    			mount_component(breadcrumb, div, null);
     			append_dev(div, t3);
-    			mount_component(divider0, div, null);
+    			mount_component(form, div, null);
     			append_dev(div, t4);
-    			mount_component(carousel, div, null);
+    			mount_component(divider0, div, null);
     			append_dev(div, t5);
-    			mount_component(divider1, div, null);
+    			mount_component(carousel, div, null);
     			append_dev(div, t6);
+    			mount_component(divider1, div, null);
+    			append_dev(div, t7);
     			mount_component(footer, div, null);
     			current = true;
     		},
@@ -2574,6 +2584,8 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			detach_dev(script);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div);
     			destroy_component(pagetype);
     			destroy_component(navbar);
